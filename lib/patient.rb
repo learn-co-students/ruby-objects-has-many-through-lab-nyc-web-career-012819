@@ -24,7 +24,9 @@ class Patient
   end
 
   def doctors
-    appointments.map(&:doctor)
+    appointments.map do |appointment|
+      appointment.doctor
+    end
   end
 
 end
